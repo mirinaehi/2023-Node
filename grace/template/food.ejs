@@ -7,9 +7,9 @@
 <body>
   <h1>좋아하는 음식</h1>
   <ul>
-    <li><%= food1 %></li>
-    <li><%= food2 %></li>
-    <li><%= food3 %></li>
+    <% food.forEach(function (e) { %>
+      <li><%= e %></li>
+    <% }); %>
   </ul>
 </body>
 </html>
