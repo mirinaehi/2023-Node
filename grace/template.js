@@ -9,6 +9,11 @@ const index = {
   here: '한국'
 };
 
+const food1 = "쿠키";
+const food2 = "초밥";
+const food3 = "떡볶이";
+
+
 const server = http.createServer(function(req, res) {
   console.log(req.url);
 
@@ -22,7 +27,9 @@ const server = http.createServer(function(req, res) {
     
   }
   else if(req.url === '/food') {
-    fs.createReadStream(path.join(__dirname, 'html', 'food.html')).pipe(res);
+    ejs.renderFile(path.join(__dirname, 'template', 'food.ejs')
+    , {food1: food1, food2: food2, food3: food3})
+    .then((data) => res.end(data));
   }
   else {
     fs.createReadStream(path.join(__dirname, 'html', '404.html')).pipe(res);
