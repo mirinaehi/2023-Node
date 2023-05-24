@@ -12,7 +12,6 @@ const index = {
 const food = ["쿠키", "초밥", "떡볶이"];
 
 
-
 const server = http.createServer(function(req, res) {
   console.log(req.url);
 
@@ -27,7 +26,7 @@ const server = http.createServer(function(req, res) {
   }
   else if(req.url === '/food') {
     ejs.renderFile(path.join(__dirname, 'template', 'food.ejs')
-    , {food})
+    , {food : food})
     .then((data) => res.end(data));
   }
   else {

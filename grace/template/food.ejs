@@ -7,9 +7,17 @@
 <body>
   <h1>좋아하는 음식</h1>
   <ul>
-    <% food.forEach(function (e) { %>
-      <li><%= e %></li>
-    <% }); %>
+    <!-- food는 배열 -->
+    <!-- 
+    <li> <%= food[0] %> </li>
+    <li> <%= food[1] %> </li>
+    <li> <%= food[2] %> </li> 
+    -->
+
+    <% food.forEach(function(e) { %>
+      <li> <%= e %> </li>
+    <% }) %>
+
   </ul>
 </body>
 </html>
