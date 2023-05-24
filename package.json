@@ -2,13 +2,14 @@
   "name": "2023-node",
   "version": "1.0.0",
   "description": "삼미웹정",
-  "main": "./grace/template.js",
+  "main": "./main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "JWP",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.9"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
   }
 }
