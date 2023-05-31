@@ -14,4 +14,12 @@ app.get('/', function(req, res, next) {
   next();
 });
 
+// http://localhost:3333/test/JWP?lang=ko
+app.get('/test/:name', function(req, res, next) {
+  console.log('path', req.path);      // '/test/JWP'
+  console.log('params', req.params);  // {name: 'JWP'}
+  console.log('query', req.query);    // {lang: 'ko'}
+  res.send('test중 콘솔을 보시오');
+});
+
 app.listen(3333);
