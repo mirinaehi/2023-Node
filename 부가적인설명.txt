@@ -2,16 +2,24 @@
   "name": "2023-node",
   "version": "1.0.0",
   "description": "삼미웹정",
-  "main": "main.js",
+  "main": "./main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./main.js"
   },
   "author": "JWP",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.9"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
 
+
 package.json에서
-"dependencies" 속성
+"dependencies" 속성과 devDependencies는 npm i(nstall)을 하면 패키지가 설치된다
+devDependencies의 경우, 개발용으로만 필요한 패키지를 명세한다
+
